@@ -52,7 +52,7 @@ class Sample
      
         $compositePredicate = predicate( fn(IntHolder $x)=> $x->value>5)
                                 ->and(predicate( fn(IntHolder $x)=> $x->value<15))
-                                ->or(predicate( fn(IntHolder $x)=> $x===18 ))
+                                ->or(predicate( fn(IntHolder $x)=> $x->value==18 ))
                                 ->negate();
         
         
